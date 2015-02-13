@@ -9,7 +9,7 @@ var x = d3.scale.linear()
 var chart = d3.select(".chart")
     .attr("width", width)
 
-d3.tsv("names.tsv", type, function(error, data) {
+d3.tsv("./data/names.tsv", type, function(error, data) {
     x.domain([0, d3.max(data, function(d) { return d.value; })]);
 
     chart.attr("height", barHeight * data.length);
